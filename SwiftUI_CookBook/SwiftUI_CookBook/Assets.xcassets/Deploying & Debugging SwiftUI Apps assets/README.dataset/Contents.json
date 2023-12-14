@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "README.markdown",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

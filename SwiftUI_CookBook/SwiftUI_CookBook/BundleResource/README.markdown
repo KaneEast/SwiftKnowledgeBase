@@ -1,0 +1,1 @@
+This archive contains the assets used in the section "Adding Audio & Video in SwiftUI". These original assets were drawn from the Kodeco archives. Longtime readers may recognize them from early iOS programming books.
