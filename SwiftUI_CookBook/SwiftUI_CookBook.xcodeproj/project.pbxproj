@@ -42,10 +42,6 @@
 		3C896BB02B24BC2A003C2171 /* DebuggingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896BAF2B24BC2A003C2171 /* DebuggingViews.swift */; };
 		3C896BB32B24BC9F003C2171 /* ReusableComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896BB22B24BC9F003C2171 /* ReusableComponents.swift */; };
 		3C896BB52B24BD24003C2171 /* ViewComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896BB42B24BD24003C2171 /* ViewComposition.swift */; };
-		3C896BB92B24BEEA003C2171 /* Ca1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896BB82B24BEE9003C2171 /* Ca1.png */; };
-		3C896BBB2B24BF28003C2171 /* Ca2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896BBA2B24BF28003C2171 /* Ca2.png */; };
-		3C896BBD2B24BF3D003C2171 /* Ca3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896BBC2B24BF3D003C2171 /* Ca3.png */; };
-		3C896BBF2B24BF5E003C2171 /* Ca4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C896BBE2B24BF5E003C2171 /* Ca4.png */; };
 		3CC186A52B2188B000E6CF74 /* SwiftUI_CookBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */; };
 		3CC186A72B2188B000E6CF74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC186A62B2188B000E6CF74 /* ContentView.swift */; };
 		3CC186A92B2188B300E6CF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CC186A82B2188B300E6CF74 /* Assets.xcassets */; };
@@ -196,11 +192,6 @@
 		3C896BAF2B24BC2A003C2171 /* DebuggingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingViews.swift; sourceTree = "<group>"; };
 		3C896BB22B24BC9F003C2171 /* ReusableComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
 		3C896BB42B24BD24003C2171 /* ViewComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComposition.swift; sourceTree = "<group>"; };
-		3C896BB72B24BEAF003C2171 /* ConfiguringAppIconsAndLaunchScreens.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ConfiguringAppIconsAndLaunchScreens.md; sourceTree = "<group>"; };
-		3C896BB82B24BEE9003C2171 /* Ca1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ca1.png; sourceTree = "<group>"; };
-		3C896BBA2B24BF28003C2171 /* Ca2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ca2.png; sourceTree = "<group>"; };
-		3C896BBC2B24BF3D003C2171 /* Ca3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ca3.png; sourceTree = "<group>"; };
-		3C896BBE2B24BF5E003C2171 /* Ca4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ca4.png; sourceTree = "<group>"; };
 		3C896BC22B24C525003C2171 /* CourseContent.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CourseContent.md; sourceTree = "<group>"; };
 		3CC186A12B2188B000E6CF74 /* SwiftUI_CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CookBookApp.swift; sourceTree = "<group>"; };
@@ -594,11 +585,6 @@
 			isa = PBXGroup;
 			children = (
 				3CC186D92B21ABAC00E6CF74 /* XcodePreviewsWithSwiftUI.swift */,
-				3C896BB82B24BEE9003C2171 /* Ca1.png */,
-				3C896BBA2B24BF28003C2171 /* Ca2.png */,
-				3C896BBC2B24BF3D003C2171 /* Ca3.png */,
-				3C896BBE2B24BF5E003C2171 /* Ca4.png */,
-				3C896BB72B24BEAF003C2171 /* ConfiguringAppIconsAndLaunchScreens.md */,
 			);
 			path = Xcode;
 			sourceTree = "<group>";
@@ -639,22 +625,22 @@
 		3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */ = {
 			isa = PBXGroup;
 			children = (
-				3C896BC12B24C507003C2171 /* SwiftData */,
+				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
+				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
 				3CC187082B21CE5F00E6CF74 /* SwiftUI-CookBook-Info.plist */,
+				3CC187092B21CF5600E6CF74 /* Nightcall.ttf */,
+				3CC186A82B2188B300E6CF74 /* Assets.xcassets */,
+				3CC186BE2B21911000E6CF74 /* Swift */,
 				3CC186D82B21AB8D00E6CF74 /* SwiftUICheetSheet */,
+				3C896BC12B24C507003C2171 /* SwiftData */,
 				3CC186B92B218DF100E6CF74 /* Architectures */,
 				3CC186B82B218DB600E6CF74 /* iOSFeatures */,
 				3CC186B72B218D7100E6CF74 /* Async_Streams */,
 				3CC186B62B218D6600E6CF74 /* Combine */,
 				3CC186B52B218C9B00E6CF74 /* Snippets */,
 				3CC186B22B2188C500E6CF74 /* Extensions */,
-				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
-				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
-				3CC186A82B2188B300E6CF74 /* Assets.xcassets */,
-				3CC187092B21CF5600E6CF74 /* Nightcall.ttf */,
 				3CC186AA2B2188B300E6CF74 /* Preview Content */,
 				3CC186BB2B218EC800E6CF74 /* SupportCode */,
-				3CC186BE2B21911000E6CF74 /* Swift */,
 				3CC186BA2B218E7A00E6CF74 /* Argorithms */,
 				3CC186D02B21A52F00E6CF74 /* Resources */,
 				3C896B072B242090003C2171 /* BundleResource */,
@@ -999,9 +985,7 @@
 			files = (
 				3C896B152B2420A5003C2171 /* crawler_jump.wav in Resources */,
 				3C896B132B2420A5003C2171 /* flyerdie.wav in Resources */,
-				3C896BBB2B24BF28003C2171 /* Ca2.png in Resources */,
 				3C896B182B2420A5003C2171 /* button.wav in Resources */,
-				3C896BBF2B24BF5E003C2171 /* Ca4.png in Resources */,
 				3C896B212B24260F003C2171 /* Screenshot 2023-12-09 at 13.35.21.png in Resources */,
 				3C896B172B2420A5003C2171 /* bounce.wav in Resources */,
 				3CC186AC2B2188B300E6CF74 /* Preview Assets.xcassets in Resources */,
@@ -1012,9 +996,7 @@
 				3C896B162B2420A5003C2171 /* README.markdown in Resources */,
 				3C896B1A2B2420A5003C2171 /* flyercloseeye.wav in Resources */,
 				3C896B142B2420A5003C2171 /* PocketCyclopsLvl1.mp3 in Resources */,
-				3C896BBD2B24BF3D003C2171 /* Ca3.png in Resources */,
 				3CC186A92B2188B300E6CF74 /* Assets.xcassets in Resources */,
-				3C896BB92B24BEEA003C2171 /* Ca1.png in Resources */,
 				3C896B1B2B2420A5003C2171 /* crawler_die.wav in Resources */,
 				3CC1870A2B21CFD000E6CF74 /* Nightcall.ttf in Resources */,
 			);
