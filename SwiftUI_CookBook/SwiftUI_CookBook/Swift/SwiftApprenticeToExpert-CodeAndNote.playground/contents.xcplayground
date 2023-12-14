@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='00-AppleSwiftDocs'/>
+        <page name='01-expressions-variables-and-constants'/>
+        <page name='02-types-and-operations'/>
+        <page name='03-basic-control-flow'/>
+        <page name='04-advanced-control-flow'/>
+        <page name='05-functions'/>
+        <page name='06-optionals'/>
+        <page name='07-collections'/>
+        <page name='08-collection-iteration-with-closures'/>
+        <page name='09-strings'/>
+        <page name='09-1-Regex'/>
+        <page name='10-structures'/>
+        <page name='11-properties'/>
+        <page name='12-methods'/>
+        <page name='13-classes'/>
+        <page name='14-advanced-classes'/>
+        <page name='15-enumerations'/>
+        <page name='16-protocols'/>
+        <page name='17-generics'/>
+        <page name='18-access-control-code-organization'/>
+        <page name='19-keypaths-custom-operators-subscripts'/>
+        <page name='20-result-builders'/>
+        <page name='21-pattern-matching'/>
+        <page name='22-1-error-handling-optional'/>
+        <page name='22-2-error-handling-bakery'/>
+        <page name='22-3-error-handling-pugbot'/>
+        <page name='22-4-error-handling-propeties-subscripts'/>
+        <page name='23-codable-serialization'/>
+        <page name='24-ARC-memory-management'/>
+        <page name='25-value-types-and-reference-types'/>
+        <page name='26-property-wrappers'/>
+        <page name='27-protocol-oriented-programming'/>
+        <page name='28-Advanced-Generics'/>
+        <page name='29-concurrency'/>
+        <page name='30-Macros'/>
+        <page name='31-Type Casting'/>
+        <page name='32-Extensions'/>
+        <page name='34-Advanced Operators'/>
+        <page name='33- Opaque and Boxed Types'/>
+        <page name='35-About the Language Reference'/>
+        <page name='36-ExpertSwift-Intro'/>
+        <page name='98-Swift-Evolution'/>
+        <page name='99-Github'/>
+        <page name='100-ArgorithmPlatforms'/>
+        <page name='101-Playground-Markdown-Template'/>
+        <page name='InterviewAlgorithmTest'/>
+        <page name='37-types-mutation'/>
+        <page name='38-protocols'/>
+        <page name='39-generics'/>
+        <page name='40-numerics-ranges'/>
+        <page name='41-sequences-collections-algorithms'/>
+        <page name='43-Codable'/>
+        <page name='42-strings'/>
+        <page name='44-Unsafe'/>
+        <page name='45-higher-order-functions'/>
+        <page name='46-functional-reactive-programming'/>
+        <page name='47-objective-c-interoperability'/>
+        <page name='48-instrumentation'/>
+    </pages>
+</playground>
