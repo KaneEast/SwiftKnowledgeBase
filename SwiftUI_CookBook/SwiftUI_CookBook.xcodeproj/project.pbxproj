@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C194AD12B2C02C600135773 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C194AD02B2C02C600135773 /* CircleImage.swift */; };
 		3C896AFE2B235DB2003C2171 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896AFD2B235DB2003C2171 /* BasicAnimation.swift */; };
 		3C896B012B237427003C2171 /* Gestures_Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896B002B237427003C2171 /* Gestures_Interactions.swift */; };
 		3C896B042B23934D003C2171 /* ModalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896B032B23934D003C2171 /* ModalViews.swift */; };
@@ -156,6 +157,7 @@
 		3C194AC72B2B384500135773 /* Stacks.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Stacks.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3C194AC92B2B384600135773 /* n-2-sorting.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "n-2-sorting.playground"; sourceTree = "<group>"; };
 		3C194ACA2B2B384600135773 /* n-2-sorting-challenges.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "n-2-sorting-challenges.playground"; sourceTree = "<group>"; };
+		3C194AD02B2C02C600135773 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		3C896AFD2B235DB2003C2171 /* BasicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
 		3C896B002B237427003C2171 /* Gestures_Interactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gestures_Interactions.swift; sourceTree = "<group>"; };
 		3C896B032B23934D003C2171 /* ModalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViews.swift; sourceTree = "<group>"; };
@@ -484,6 +486,22 @@
 			path = "26-n-2-sorting";
 			sourceTree = "<group>";
 		};
+		3C194ACE2B2C027100135773 /* AppleTutorial */ = {
+			isa = PBXGroup;
+			children = (
+				3C194ACF2B2C028200135773 /* Landmark */,
+			);
+			path = AppleTutorial;
+			sourceTree = "<group>";
+		};
+		3C194ACF2B2C028200135773 /* Landmark */ = {
+			isa = PBXGroup;
+			children = (
+				3C194AD02B2C02C600135773 /* CircleImage.swift */,
+			);
+			path = Landmark;
+			sourceTree = "<group>";
+		};
 		3C896AFF2B2373F6003C2171 /* Gestures_Interactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,6 +643,7 @@
 		3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				3C194ACE2B2C027100135773 /* AppleTutorial */,
 				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
 				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
 				3CC187082B21CE5F00E6CF74 /* SwiftUI-CookBook-Info.plist */,
@@ -1051,6 +1070,7 @@
 				3C896BB52B24BD24003C2171 /* ViewComposition.swift in Sources */,
 				3CC187282B23569100E6CF74 /* AlignmentGuides.swift in Sources */,
 				3C896B232B24265E003C2171 /* RecordingAudioAndVideo.swift in Sources */,
+				3C194AD12B2C02C600135773 /* CircleImage.swift in Sources */,
 				3CC186E92B21BC0400E6CF74 /* CustomizedView.swift in Sources */,
 				3CC186E52B21BB4E00E6CF74 /* ImagesSymbols.swift in Sources */,
 				3C896B872B24734D003C2171 /* Charts.swift in Sources */,

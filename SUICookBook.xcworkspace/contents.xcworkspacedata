@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SwiftUI_CookBook/SwiftUI_CookBook.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Landmarks/Landmarks.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ViewLayoutSample/SpacingViews.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StateAndDataFlow/StateAndDataFlow_RecipesSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Fruta/Fruta.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Food Truck/Food Truck.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Backyard Birds/Backyard Birds.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:NavigationCookbook/NavigationCookbook/NavigationCookbook.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ObservationSample/ObservationSample.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StateRestoration/StateRestoration.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Earthquakes/Earthquakes.xcodeproj">
+   </FileRef>
+</Workspace>
