@@ -104,3 +104,13 @@
  - [The Movie Database (TMDb) Developer Documentation](https://developer.themoviedb.org/docs)
  - [Unsplash Developers](https://unsplash.com/developers)
  */
+
+/*:
+ 1. Swift Apprentice: Fundamentals
+   https://www.kodeco.com/books/swift-apprentice-fundamentals
+ 2. Swift Apprentice: Beyond the Basics
+   https://www.kodeco.com/books/swift-apprentice-beyond-the-basics
+ 3.  Expert Swift
+   https://www.kodeco.com/books/expert-swift
+ */
+

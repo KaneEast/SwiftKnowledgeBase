@@ -1,10 +1,3 @@
-//
-//  InfinitelyScrollingListView.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import SwiftUI
 // MARK: Infinitely Scrolling
 struct InfinitelyScrollingListView: View {

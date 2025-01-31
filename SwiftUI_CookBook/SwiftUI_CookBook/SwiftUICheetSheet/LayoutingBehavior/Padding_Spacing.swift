@@ -1,18 +1,4 @@
-//
-//  Padding_Spacing.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/08.
-//
-
 import SwiftUI
-
-/**
- Padding and spacing are crucial tools in your SwiftUI toolkit, enabling you to create clear, visually distinct, and aesthetically pleasing interfaces. By mastering these modifiers, you can bring your app’s UI to the next level of polish.
-
- Here’s an example of using padding and spacing modifiers within a VStack, HStack and individual views:
- */
-
 struct Padding_Spacing: View {
   var body: some View {
     VStack(spacing: 20) {
@@ -42,7 +28,6 @@ struct Padding_Spacing: View {
     .padding()
   }
 }
-
 
 #Preview {
     Padding_Spacing()

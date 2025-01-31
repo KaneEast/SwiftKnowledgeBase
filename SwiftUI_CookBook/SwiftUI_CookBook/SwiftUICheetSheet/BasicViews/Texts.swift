@@ -1,16 +1,7 @@
-//
-//  TextCheetSheet.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 // https://developer.apple.com/documentation/swiftui/font/textstyle
 // https://developer.apple.com/design/human-interface-guidelines/typography
 // https://developers.google.com/fonts?hl=zh-cn
 // https://www.kodeco.com/books/swiftui-cookbook/v1.0/chapters/6-use-custom-fonts-in-swiftui
-
-
 import SwiftUI
 
 let quote = """

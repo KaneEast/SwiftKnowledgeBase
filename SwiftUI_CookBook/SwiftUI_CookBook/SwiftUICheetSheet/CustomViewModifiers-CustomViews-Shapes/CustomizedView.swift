@@ -1,10 +1,3 @@
-//
-//  CustomizedView.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import SwiftUI
 struct MyView: View {
   var body: some View {
@@ -103,7 +96,6 @@ struct CustomizedView: View {
 #Preview(body: {
   CustomizedView()
 })
-
 
 struct CustomShape: Shape {
   func path(in rect: CGRect) -> Path {

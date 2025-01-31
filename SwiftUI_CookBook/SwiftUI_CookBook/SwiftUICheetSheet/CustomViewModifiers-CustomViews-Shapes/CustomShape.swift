@@ -1,10 +1,3 @@
-//
-//  CustomShape.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import SwiftUI
 struct DiamondShape: Shape {
   func path(in rect: CGRect) -> Path {
@@ -66,7 +59,6 @@ struct StarShapeView: View {
       .clipShape(StarShape(points: 5, smoothness: 0.4))
   }
 }
-
 
 #Preview {
   Group {

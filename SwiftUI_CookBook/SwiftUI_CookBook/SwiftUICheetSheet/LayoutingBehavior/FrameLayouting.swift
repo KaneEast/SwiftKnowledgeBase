@@ -1,13 +1,5 @@
-//
-//  FrameLayouting.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import Foundation
 import SwiftUI
-
 struct FrameLayoutingView: View {
   var body: some View {
     VStack {

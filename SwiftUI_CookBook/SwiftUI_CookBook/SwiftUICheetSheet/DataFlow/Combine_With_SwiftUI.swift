@@ -1,10 +1,3 @@
-//
-//  Combine_With_SwiftUI.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import SwiftUI
 import Combine
 

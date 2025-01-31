@@ -1,14 +1,5 @@
-//
-//  Indicators.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import SwiftUI
 import Combine
-
-// MARK: ProgressBar
 struct ProgressBar: View {
   @State private var progress: CGFloat = 0.0
 
@@ -33,8 +24,6 @@ struct ProgressBar: View {
     }
   }
 }
-
-// Spinning Activity Indicator
 struct SpinnerView: View {
   var body: some View {
     ProgressView()
@@ -48,14 +37,6 @@ struct SpinnerView: View {
       }
   }
 }
-
-//struct ContentView: View {
-//  var body: some View {
-//    SpinnerView()
-//  }
-//}
-
-
 
 #Preview {
   VStack(spacing: 20) {

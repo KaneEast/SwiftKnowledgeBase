@@ -1,11 +1,4 @@
-//
-//  ButtonView.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
 import SwiftUI
-
 struct ButtonView: View {
   var body: some View {
     Button(action: {
@@ -26,7 +19,6 @@ struct ButtonView: View {
 struct Button1: View {
   var body: some View {
     Button("Submit") {
-      // Action to perform when button is tapped
     }
     .font(.headline)
     .padding()
@@ -39,7 +31,6 @@ struct Button1: View {
 struct CustomizeButtonAppearanceView: View {
   var body: some View {
     Button("Press Me!") {
-      // Button action goes here
     }
     .padding()
     .background(.orange)
@@ -100,29 +91,10 @@ struct ToggleButtonView: View {
     .padding()
   }
 }
-/**
- Modifying the Appearance of a Toggle
- In SwiftUI, you can modify the appearance of a Toggle view by using the .toggleStyle() modifier. The built-in toggle styles in SwiftUI include:
-
- DefaultToggleStyle: This is the default style that SwiftUI uses when no other style is specified. It changes appearance depending on the platform. On iOS, it appears as a switch, while on macOS, it appears as a checkbox. This style is useful when you want your toggle to automatically match the platform’s conventions.
-
- SwitchToggleStyle: This style makes your toggle look like a classic iOS switch, regardless of the platform. It’s a good choice when you want to keep the same appearance across different platforms or when you specifically want the iOS switch look.
-
- CheckboxToggleStyle: This style makes your toggle appear as a checkbox. This is typically used on macOS, but can be used on iOS if you prefer a checkbox appearance over the switch.
-
- ButtonToggleStyle: This style presents the toggle as a button that shows its on/off status. This style can be beneficial when you want the user to acknowledge the action they’re performing each time they change the toggle’s state.
-
- PickToggleStyle: This style presents the toggle as a picker. You might use this style if you have multiple options that are mutually exclusive.
-
- In addition to these built-in styles, you can also create your own custom toggle styles by conforming to the ToggleStyle protocol. This gives you full control over the toggle’s appearance and interaction.
-
- So, there you have it! That’s how to create a toggle button in SwiftUI. Always remember that the key is to bind your Toggle to a @State variable. SwiftUI will take care of the rest, re-rendering your UI whenever the state changes. Happy toggling!
- */
 
 // MARK: Disable a Button
 struct DisableAButtonView: View {
   @State private var isButtonDisabled = true
-
   var body: some View {
     VStack {
       Button("Tap me") {
@@ -143,7 +115,6 @@ struct IconButtonView: View {
   var body: some View {
     VStack {
       Button(action: {
-        // Action to perform when the button is tapped
       }) {
         Label("Show Some Love!", systemImage: "heart.fill")
           .padding()
@@ -196,25 +167,6 @@ struct AdvancedButtonStylingView: View {
     }
   }
 }
-/**
- Here’s what’s happening in this code:
-
- A state variable, isPressed, is declared to track whether the button is pressed.
- When the button is pressed, the isPressed state variable is toggled between true and false.
- The button’s label is set to "3D Button".
- The button’s label is styled with a large title font.
- The frame modifier is used to explicitly set the button’s size.
- The background modifier is used to set the button’s background.
- A ZStack is used to layer multiple views. Here, a conditional statement is used to change the color of the button when it’s pressed.
- clipShape is used to clip the view to a rounded rectangle shape.
- Two shadow modifiers create a 3D effect by applying lighter and darker shadows on different sides of the button. The shadow’s color and offset change based on the isPressed state.
- The scaleEffect modifier is used to slightly reduce the size of the button when it’s pressed, enhancing the 3D effect.
- An animation is added to smooth the button’s response to being pressed. The animation is tied to the isPressed state.
- The foregroundColor modifier changes the button’s label color based on the isPressed state.
- SwiftUI enables you to style your views creatively and craft unique user interfaces. However, it’s crucial to maintain consistency in your design language across your app, ensuring a cohesive user experience. Excessive or inconsistent styling can potentially confuse users, detracting from the overall app experience.
-
- Leveraging the power of SwiftUI to style buttons and other UI elements is an excellent way to shape your app’s identity and help it stand out in a crowded marketplace. Nothing says ‘Download Me!’ quite like a button that is both visually compelling and delightfully interactive!
- */
 
 // MARK: Checkbox
 struct CheckboxView: View {

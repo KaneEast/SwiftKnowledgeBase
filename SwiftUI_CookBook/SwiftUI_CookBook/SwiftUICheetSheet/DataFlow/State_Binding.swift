@@ -1,19 +1,3 @@
-//
-//  State-Binding.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
-/**
- Understanding State
- In SwiftUI, State is a property wrapper that you use to store simple values that belong to a specific view and that change over time. When a State value changes, the view invalidates its appearance and recomputes the body property. This means that SwiftUI automatically re-renders the view whenever the State changes.
- 
- Understanding Binding
- Binding in SwiftUI creates a two-way connection between a property that stores data and a view that displays and changes that data. It allows the data to be mutable so that SwiftUI can modify the value inside a structure that would usually be immutable.
- 
- */
-
 import SwiftUI
 struct StateBindingView: View {
   @State private var selectedColor = Color.red

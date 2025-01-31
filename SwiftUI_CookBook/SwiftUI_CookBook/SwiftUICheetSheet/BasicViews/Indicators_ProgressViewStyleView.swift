@@ -1,12 +1,4 @@
-//
-//  ProgressViewStyle.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/07.
-//
-
 import SwiftUI
-
 struct ProgressViewStyleView: View {
   @State private var progressValue = 0.5
   var body: some View {
@@ -23,7 +15,6 @@ struct ProgressViewStyleView: View {
       }
   }
 }
-
 struct CustomProgressViewStyle: ProgressViewStyle {
   func makeBody(configuration: Configuration) -> some View {
     VStack {
@@ -33,37 +24,6 @@ struct CustomProgressViewStyle: ProgressViewStyle {
     }
   }
 }
-
-#Preview {
-  VStack(spacing: 10) {
-    ProgressViewStyleView()
-    CircularProgressBar()
-    DeterminateProgressBar()
-    IndeterminateProgress()
-    ProgressViewInNavigationBar()
-    CustomSegmentedProgressBar()
-    CustomProgressViewViewer()
-  }
-}
-
-
-/**
- Choosing a Progress View Style in SwiftUI
- SwiftUI provides several built-in progress view styles:
-
- DefaultProgressViewStyle is the default style provided by SwiftUI, which adapts to the platform and environment settings of the application. Use this when you want your progress view to match the default system style, and you don’t have specific styling requirements for your progress view. This could be used in a variety of situations such as showing the progress of a file download or a long computation.
-
- CircularProgressViewStyle displays progress as a circular, rotating activity indicator, which can either be indeterminate (spinning without displaying specific progress) or determinate (showing progress as a partial circle). This style is useful when the exact progress is either not known or not important to convey. For example, in a weather app while fetching the latest data, a circular progress view can be shown as the data load time could vary and does not have a defined end point.
-
- LinearProgressViewStyle presents progress as a horizontal bar, also known as a progress bar, which is filled from left to right. This style is best used when you want to give the user a visual representation of the completion level of a known, finite task. For instance, in a file upload process in a cloud storage app, showing a linear progress bar helps users understand how much of the upload has completed and how much is remaining.
-
-
- */
-
-
-/**
- CircularProgressBar
- */
 struct CircularProgressBar: View {
   @State private var progress: CGFloat = 0.2 // example progress value
 
@@ -77,7 +37,6 @@ struct CircularProgressBar: View {
     }
   }
 }
-
 struct CircularProgressView: View {
   let progress: CGFloat
 
@@ -99,8 +58,6 @@ struct CircularProgressView: View {
     }
   }
 }
-
-// MARK: DeterminateProgressBar
 struct DeterminateProgressBar: View {
   @State private var downloadProgress = 0.0
   @State private var timer: Timer? = nil
@@ -127,14 +84,11 @@ struct DeterminateProgressBar: View {
     }
   }
 }
-
-// MARK: Indeterminate Progress
 struct IndeterminateProgress: View {
   var body: some View {
     IndeterminateProgressView()
   }
 }
-
 struct IndeterminateProgressView: View {
   @State private var isLoading = true
 
@@ -157,8 +111,6 @@ struct IndeterminateProgressView: View {
     }
   }
 }
-
-// MARK: Add a Progress View to a Navigation Bar
 struct ProgressViewInNavigationBar: View {
   var body: some View {
     NavigationStack {
@@ -177,8 +129,6 @@ struct ProgressViewInNavigationBar: View {
     }
   }
 }
-
-// MARK: Custom Segmented Progress Bar
 struct CustomSegmentedProgressBar: View {
   @State private var progressOne: CGFloat = 0
   @State private var progressTwo: CGFloat = 0
@@ -224,8 +174,6 @@ struct CustomSegmentedProgressBar: View {
     .padding()
   }
 }
-
-// MARK: Custom Progress View
 struct CustomProgressView: View {
   let progress: CGFloat
 
@@ -265,4 +213,14 @@ struct CustomProgressViewViewer: View {
     }
   }
 }
-
+#Preview {
+  VStack(spacing: 10) {
+    ProgressViewStyleView()
+    CircularProgressBar()
+    DeterminateProgressBar()
+    IndeterminateProgress()
+    ProgressViewInNavigationBar()
+    CustomSegmentedProgressBar()
+    CustomProgressViewViewer()
+  }
+}

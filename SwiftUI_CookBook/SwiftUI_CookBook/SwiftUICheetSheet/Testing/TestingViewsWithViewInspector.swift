@@ -1,27 +1,6 @@
-//
-//  TestingViewsWithViewInspector.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/09.
-//
-
 import SwiftUI
+//https://github.com/nalexn/ViewInspector
 
-/**
- ViewInspector is a powerful library for inspecting and testing SwiftUI views. This chapter demonstrates how to write tests for a simple to-do list app, showcasing how to use ViewInspector to verify the view hierarchy, modifiers and state.
-
- Adding the ViewInspector Package to a SwiftUI Project
- First, ensure your project has a unit testing suite. If it does not, add one by selecting File ▸ New ▸ Target and choosing the Unit Testing Bundle template.
-
- Next, add ViewInspector to your project through Swift Package Manager. To access the Swift Package Manager, go to File ▸ Add Packages… Then, enter the following URL and click Add Package:
-
- https://github.com/nalexn/ViewInspector
-
- Make sure to add the package to your unit testing target and NOT your main app target.
-
- Testing a To-Do List App
- Start by creating a simple model for to-do items:
- */
 struct ToDoItem: Identifiable {
   let id = UUID()
   let title: String

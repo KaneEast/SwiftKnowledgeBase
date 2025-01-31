@@ -7,22 +7,22 @@
 		<key>Backyard Birds (Watch).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>165</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Backyard Birds.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>164</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Widgets (Multiplatform).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>180</integer>
+			<integer>16</integer>
 		</dict>
 		<key>Widgets (Watch).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>181</integer>
+			<integer>17</integer>
 		</dict>
 	</dict>
 </dict>

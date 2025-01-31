@@ -1,19 +1,6 @@
-//
-//  Charts.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/09.
-//
-
 import SwiftUI
+import Charts
 
-// MARK: Create & Customize Charts in SwiftUI With Swift Charts
-/**
- Visualizing sales data is crucial for any business. In this chapter, you’ll create a line chart for a fictional pet store to visualize the monthly sales of different pet categories (Dogs, Cats, Birds and Fish). You’ll use an enum and SwiftUI’s ForEach to draw the line for each pet category.
-
- Step 1: Define the Enum and Data Source
- You’ll start by defining an enum to represent the pet types and a struct to represent the monthly sales data for each pet category. Create a new Swift file called PetSales.swift and replaced its contents with the following:
- */
 enum CPet: String {
   case dog, cat, bird, fish
 }
@@ -24,13 +11,6 @@ struct PetSales: Identifiable {
   var value: Double
   var id = UUID()
 }
-/**
- Step 2: Initialize the Line Chart View
- You’ll create a LineChart view to visualize this data. Inside this chart view, you’ll loop through the salesData using ForEach and plot the line for each pet sale.
-
- Try this out by adding a new SwiftUI View in your project called LineChartView.swift and replacing its contents with the following:
- */
-import Charts
 
 struct LineChartView: View {
   let salesData: [PetSales] = [
@@ -77,14 +57,7 @@ struct LineChartView: View {
     }
   }
 }
-/**
- LineMark is used to plot the line for each pet category.
- x and y properties are set based on the month and sales numbers.
- .foregroundStyle(by:) is used to customize the line color based on the pet category.
- 
- Step 3: Use the Line Chart in the Main View
- Finally, you can use LineChartView inside the main content view:
- */
+
 struct Charts: View {
   var body: some View {
     VStack {

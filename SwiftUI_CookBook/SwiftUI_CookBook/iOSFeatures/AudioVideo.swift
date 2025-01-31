@@ -1,10 +1,3 @@
-//
-//  AudioVideo.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/09.
-//
-
 import AVFoundation
 import SwiftUI
 
@@ -100,14 +93,6 @@ struct VideoStreaming: View {
   VideoStreaming()
 }
 
-
-
-// MARK: AnimatedVisualizer
-/**
- Have you ever wanted to add some pizzazz to your audio and video app? Adding animated visualizations to your app can provide a cool and immersive experience for your users.
-
- In SwiftUI, creating animated visualizations for audio and video is a breeze. All you need is a basic understanding of the Path and Shape protocols.
- */
 struct AnimatedVisualizer: Shape {
   let audioSamples: [CGFloat]
 
@@ -154,30 +139,9 @@ struct AnimatedVisualizerView: View {
     return samples
   }
 }
-/**
- In this example code, you have created a custom shape called AnimatedVisualizer. The shape takes in an array of CGFloat values representing the audio samples. The path function is then used to create a visualization based on the provided audio samples.
-
- You then use this custom shape in your ContentView, where you use a ZStack to add your visualization as a background element. You also add some animations to give the visualization a cool pulsating effect.
-
- In the onAppear block, you generate random audio samples every 0.2 seconds to update the visualization dynamically.
-
- With this code example, you should be able to create your own animated visualizations for your audio and video app in no time.
- */
-
-
-
 #Preview {
   AnimatedVisualizerView()
 }
-
-
-// MARK: Adding Captions & Subtitles to Videos
-/**
- Captions and subtitles significantly enhance the accessibility and inclusivity of video content. SwiftUI makes it easier to overlay text on a video player, effectively creating subtitles.
-
-
- */
-
 
 struct CaptionsSubtitles: View {
   @State var player = AVPlayer(url: Bundle.main.url(forResource: "BookTrailer", withExtension: "m4v")!)
@@ -220,16 +184,6 @@ struct CaptionsSubtitles: View {
   CaptionsSubtitles()
 }
 
-
-// MARK: Handling Errors & Exceptions While Playing Audio & Video
-/**
- Playing audio or video content is a common feature in many apps. However, dealing with the associated errors and exceptions can be a bit daunting. Fear not! In this cookbook entry, you will discover how to elegantly handle such issues in SwiftUI, thereby ensuring a smooth and user-friendly playback experience.
-
- Audio and video playback errors could stem from a range of issues including network connectivity problems, missing or misplaced files, and unsupported file formats, among others. It’s crucial to manage these errors gracefully, providing users with clear and helpful feedback whenever an issue arises.
-
- Here’s a simplified example of how this error handling could be done in SwiftUI:
- */
-
 struct HandlingErrors: View {
   let player = AVPlayer(url: URL(string: "https://archive.org/download/lunchroom_manners/lunchroom_manners_512kb.mp4")!)
   let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -247,18 +201,6 @@ struct HandlingErrors: View {
     })
   }
 }
-/**
- To test this locally, try playing the video with your network connection disabled. You should then see the error message displayed.
-
- In this example, the VideoPlayer view from the AVKit framework is used to play a video. The isPlaybackLikelyToKeepUp property of AVPlayerItem is employed to determine if the network load is hampering video playback. If it’s likely to impede the playback, a user-friendly error message is displayed.
-
- This method is a simplified way to handle playback errors, particularly for scenarios involving network issues. Depending on your specific needs, other actions may be necessary to handle various error types.
-
- While handling errors is important, it’s equally crucial to address exceptions that could be thrown during media playback. For instance, exceptions might be thrown when a user attempts to play a DRM-protected video without the requisite permissions. Normally, such exceptions can be caught and handled using a try-catch block.
-
- Wrapping up, handling errors and exceptions while playing audio or video in SwiftUI is a key aspect of ensuring a robust and user-friendly media playback experience. Always aim to provide meaningful feedback to users when errors arise, and handle exceptions efficiently to enhance the overall playback experience.
- */
-
 #Preview {
   HandlingErrors()
 }

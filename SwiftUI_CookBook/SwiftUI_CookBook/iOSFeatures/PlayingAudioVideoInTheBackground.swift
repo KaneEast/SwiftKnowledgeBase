@@ -1,21 +1,5 @@
-//
-//  PlayingAudioVideoInTheBackground.swift
-//  SwiftUI_CookBook
-//
-//  Created by Kane on 2023/12/09.
-//
-
 import AVKit
 import SwiftUI
-
-// MARK: // MARK: Playing Audio & Video in the Background
-/**
- There are many scenarios in which you might need to play audio or video in the background. For instance, an app that offers music or podcast streaming like or video playback would require this functionality so that users can continue to listen to the audio or watch videos even when the app is not currently active on the screen.
-
- To enable this functionality in SwiftUI, you can use the AVPlayer class along with the AVPlayerViewController. Let’s create a simple player view that plays a video in the background:
- */
-
-
 struct PlayingAudioVideoInTheBackground: UIViewControllerRepresentable {
   var videoURL = URL(string:"https://archive.org/download/ksnn_compilation_master_food_in_space/ksnn_compilation_master_food_in_space_512kb.mp4")!
 
