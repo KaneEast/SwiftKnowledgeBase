@@ -666,6 +666,7 @@
 		3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				3CDF2E452E0A868A00EB6FA0 /* Todos */,
 				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
 				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
 				3CC187082B21CE5F00E6CF74 /* SwiftUI-CookBook-Info.plist */,
@@ -673,11 +674,8 @@
 				3CC186A82B2188B300E6CF74 /* Assets.xcassets */,
 				3CC186BE2B21911000E6CF74 /* Swift */,
 				3CC186D82B21AB8D00E6CF74 /* SwiftUICheetSheet */,
-				3C896BC12B24C507003C2171 /* SwiftData */,
 				3CC186B92B218DF100E6CF74 /* Architectures */,
 				3CC186B82B218DB600E6CF74 /* iOSFeatures */,
-				3CC186B72B218D7100E6CF74 /* Async_Streams */,
-				3CC186B62B218D6600E6CF74 /* Combine */,
 				3CC186B52B218C9B00E6CF74 /* Snippets */,
 				3CC186B22B2188C500E6CF74 /* Extensions */,
 				3CC186AA2B2188B300E6CF74 /* Preview Content */,
@@ -933,6 +931,16 @@
 				3C896AFD2B235DB2003C2171 /* BasicAnimation.swift */,
 			);
 			path = Animations_Transitions;
+			sourceTree = "<group>";
+		};
+		3CDF2E452E0A868A00EB6FA0 /* Todos */ = {
+			isa = PBXGroup;
+			children = (
+				3CC186B72B218D7100E6CF74 /* Async_Streams */,
+				3CC186B62B218D6600E6CF74 /* Combine */,
+				3C896BC12B24C507003C2171 /* SwiftData */,
+			);
+			path = Todos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
