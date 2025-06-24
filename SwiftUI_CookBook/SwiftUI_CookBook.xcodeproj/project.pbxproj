@@ -531,14 +531,6 @@
 			path = CertificateManagement;
 			sourceTree = "<group>";
 		};
-		3C352DAA2B5BAFB800B4C976 /* Xcode_Doc */ = {
-			isa = PBXGroup;
-			children = (
-				3C352DAB2B5BAFF000B4C976 /* ManagingXcodeSpace.md */,
-			);
-			path = Xcode_Doc;
-			sourceTree = "<group>";
-		};
 		3C896AFF2B2373F6003C2171 /* Gestures_Interactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				3CC186D92B21ABAC00E6CF74 /* XcodePreviewsWithSwiftUI.swift */,
+				3C352DAB2B5BAFF000B4C976 /* ManagingXcodeSpace.md */,
 			);
 			path = Xcode;
 			sourceTree = "<group>";
@@ -655,7 +648,6 @@
 		3CC186982B2188B000E6CF74 = {
 			isa = PBXGroup;
 			children = (
-				3C352DAA2B5BAFB800B4C976 /* Xcode_Doc */,
 				3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */,
 				3C896B962B247817003C2171 /* SwiftUI_CookBookTests */,
 				3CC186A22B2188B000E6CF74 /* Products */,
