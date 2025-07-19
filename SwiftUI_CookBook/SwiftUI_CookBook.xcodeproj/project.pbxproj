@@ -84,6 +84,10 @@
 		3CC187262B2355EA00E6CF74 /* Padding_Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC187252B2355E900E6CF74 /* Padding_Spacing.swift */; };
 		3CC187282B23569100E6CF74 /* AlignmentGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC187272B23569100E6CF74 /* AlignmentGuides.swift */; };
 		3CC1872B2B235BB100E6CF74 /* MasteringSafeAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1872A2B235BB100E6CF74 /* MasteringSafeAreas.swift */; };
+		3CDB9EF42E2BE70900F30185 /* ConcurrencySimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF32E2BE70900F30185 /* ConcurrencySimple.swift */; };
+		3CDB9EF62E2BF73F00F30185 /* Sendable.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF52E2BF73F00F30185 /* Sendable.md */; };
+		3CDB9EF82E2BF83100F30185 /* AsyncStream.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF72E2BF83100F30185 /* AsyncStream.md */; };
+		3CDB9EFA2E2BF93300F30185 /* AsyncStream_VS_Combine.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF92E2BF93300F30185 /* AsyncStream_VS_Combine.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +141,7 @@
 		3C896BAC2B24BB0F003C2171 /* OptimizingAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptimizingAnimations.swift; sourceTree = "<group>"; };
 		3C896BB22B24BC9F003C2171 /* ReusableComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableComponents.swift; sourceTree = "<group>"; };
 		3C896BB42B24BD24003C2171 /* ViewComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewComposition.swift; sourceTree = "<group>"; };
-		3C896BC22B24C525003C2171 /* CourseContent.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CourseContent.md; sourceTree = "<group>"; };
+		3C896BC22B24C525003C2171 /* SwiftDataContent.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftDataContent.md; sourceTree = "<group>"; };
 		3CC186A12B2188B000E6CF74 /* SwiftUI_CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_CookBookApp.swift; sourceTree = "<group>"; };
 		3CC186A62B2188B000E6CF74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -193,6 +197,10 @@
 		3CC187252B2355E900E6CF74 /* Padding_Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding_Spacing.swift; sourceTree = "<group>"; };
 		3CC187272B23569100E6CF74 /* AlignmentGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuides.swift; sourceTree = "<group>"; };
 		3CC1872A2B235BB100E6CF74 /* MasteringSafeAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasteringSafeAreas.swift; sourceTree = "<group>"; };
+		3CDB9EF32E2BE70900F30185 /* ConcurrencySimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencySimple.swift; sourceTree = "<group>"; };
+		3CDB9EF52E2BF73F00F30185 /* Sendable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sendable.md; sourceTree = "<group>"; };
+		3CDB9EF72E2BF83100F30185 /* AsyncStream.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AsyncStream.md; sourceTree = "<group>"; };
+		3CDB9EF92E2BF93300F30185 /* AsyncStream_VS_Combine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AsyncStream_VS_Combine.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,46 +222,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3C352D9D2B2EFFB700B4C976 /* Design */ = {
-			isa = PBXGroup;
-			children = (
-				3C352DA02B2F003200B4C976 /* DesignNote.md */,
-			);
-			path = Design;
-			sourceTree = "<group>";
-		};
-		3C352D9F2B2F001B00B4C976 /* DependencyManagers */ = {
-			isa = PBXGroup;
-			children = (
-				3C352D9E2B2F001000B4C976 /* DependencyManagers.md */,
-			);
-			path = DependencyManagers;
-			sourceTree = "<group>";
-		};
-		3C352DA22B2F00F500B4C976 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				3C352DA32B2F010F00B4C976 /* LibrariesNote.md */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		3C352DA42B2F04A300B4C976 /* AppServices */ = {
-			isa = PBXGroup;
-			children = (
-				3C352DA52B2F04BA00B4C976 /* AppServicesNote.md */,
-			);
-			path = AppServices;
-			sourceTree = "<group>";
-		};
-		3C352DA62B2F04F600B4C976 /* CertificateManagement */ = {
-			isa = PBXGroup;
-			children = (
-				3C352DA72B2F050B00B4C976 /* CertificateManagementNote.md */,
-			);
-			path = CertificateManagement;
-			sourceTree = "<group>";
-		};
 		3C896AFF2B2373F6003C2171 /* Gestures_Interactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,14 +297,6 @@
 			path = Xcode;
 			sourceTree = "<group>";
 		};
-		3C896BC12B24C507003C2171 /* SwiftData */ = {
-			isa = PBXGroup;
-			children = (
-				3C896BC22B24C525003C2171 /* CourseContent.md */,
-			);
-			path = SwiftData;
-			sourceTree = "<group>";
-		};
 		3CC186982B2188B000E6CF74 = {
 			isa = PBXGroup;
 			children = (
@@ -358,7 +318,6 @@
 		3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */ = {
 			isa = PBXGroup;
 			children = (
-				3CDF2E452E0A868A00EB6FA0 /* Todos */,
 				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
 				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
 				3CC187082B21CE5F00E6CF74 /* SwiftUI-CookBook-Info.plist */,
@@ -371,14 +330,7 @@
 				3CC186B52B218C9B00E6CF74 /* Snippets */,
 				3CC186B22B2188C500E6CF74 /* Extensions */,
 				3CC186AA2B2188B300E6CF74 /* Preview Content */,
-				3CC186BB2B218EC800E6CF74 /* SupportCode */,
-				3C352DA22B2F00F500B4C976 /* Libraries */,
-				3CC186D02B21A52F00E6CF74 /* Resources */,
 				3C896B072B242090003C2171 /* BundleResource */,
-				3C352D9F2B2F001B00B4C976 /* DependencyManagers */,
-				3C352DA62B2F04F600B4C976 /* CertificateManagement */,
-				3C352DA42B2F04A300B4C976 /* AppServices */,
-				3C352D9D2B2EFFB700B4C976 /* Design */,
 			);
 			path = SwiftUI_CookBook;
 			sourceTree = "<group>";
@@ -402,23 +354,20 @@
 		3CC186B52B218C9B00E6CF74 /* Snippets */ = {
 			isa = PBXGroup;
 			children = (
+				3C352D9E2B2F001000B4C976 /* DependencyManagers.md */,
+				3CC186CF2B21A4D500E6CF74 /* SwiftResources.md */,
+				3CC186D12B21A65F00E6CF74 /* TherdPartyLibraries.md */,
+				3CC186D22B21A69E00E6CF74 /* Programable APIs.md */,
+				3CC186D52B21A6F500E6CF74 /* Apple Developer.md */,
+				3CC186D62B21A74900E6CF74 /* Blogs.md */,
+				3CC186D72B21A92100E6CF74 /* SwiftUI.md */,
 				3C352DA12B2F008600B4C976 /* SnippetsNote.md */,
+				3C352DA32B2F010F00B4C976 /* LibrariesNote.md */,
+				3C352DA52B2F04BA00B4C976 /* AppServicesNote.md */,
+				3C352DA72B2F050B00B4C976 /* CertificateManagementNote.md */,
+				3C352DA02B2F003200B4C976 /* DesignNote.md */,
 			);
 			path = Snippets;
-			sourceTree = "<group>";
-		};
-		3CC186B62B218D6600E6CF74 /* Combine */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Combine;
-			sourceTree = "<group>";
-		};
-		3CC186B72B218D7100E6CF74 /* Async_Streams */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Async_Streams;
 			sourceTree = "<group>";
 		};
 		3CC186B82B218DB600E6CF74 /* iOSFeatures */ = {
@@ -443,38 +392,23 @@
 			path = Architectures;
 			sourceTree = "<group>";
 		};
-		3CC186BB2B218EC800E6CF74 /* SupportCode */ = {
-			isa = PBXGroup;
-			children = (
-				3CC186BC2B218EF400E6CF74 /* SupportCode.swift */,
-			);
-			path = SupportCode;
-			sourceTree = "<group>";
-		};
 		3CC186BE2B21911000E6CF74 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
+				3C896BC22B24C525003C2171 /* SwiftDataContent.md */,
 				3CC186BF2B21912600E6CF74 /* Protocols.swift */,
 				3CC186C12B219B9100E6CF74 /* Generics.swift */,
 				3CC186C32B219C5200E6CF74 /* Advanced-Generics.swift */,
 				3CC186C52B219EEA00E6CF74 /* Concurrency.swift */,
+				3CDB9EF32E2BE70900F30185 /* ConcurrencySimple.swift */,
+				3CDB9EF52E2BF73F00F30185 /* Sendable.md */,
+				3CDB9EF72E2BF83100F30185 /* AsyncStream.md */,
+				3CDB9EF92E2BF93300F30185 /* AsyncStream_VS_Combine.md */,
 				3CC186C72B21A05800E6CF74 /* Macros.swift */,
 				3CC186C92B21A09200E6CF74 /* Access-control-code-organization.swift */,
+				3CC186BC2B218EF400E6CF74 /* SupportCode.swift */,
 			);
 			path = Swift;
-			sourceTree = "<group>";
-		};
-		3CC186D02B21A52F00E6CF74 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				3CC186CF2B21A4D500E6CF74 /* SwiftResources.md */,
-				3CC186D12B21A65F00E6CF74 /* TherdPartyLibraries.md */,
-				3CC186D22B21A69E00E6CF74 /* Programable APIs.md */,
-				3CC186D52B21A6F500E6CF74 /* Apple Developer.md */,
-				3CC186D62B21A74900E6CF74 /* Blogs.md */,
-				3CC186D72B21A92100E6CF74 /* SwiftUI.md */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		3CC186D82B21AB8D00E6CF74 /* SwiftUICheetSheet */ = {
@@ -586,16 +520,6 @@
 			path = Animations_Transitions;
 			sourceTree = "<group>";
 		};
-		3CDF2E452E0A868A00EB6FA0 /* Todos */ = {
-			isa = PBXGroup;
-			children = (
-				3CC186B72B218D7100E6CF74 /* Async_Streams */,
-				3CC186B62B218D6600E6CF74 /* Combine */,
-				3C896BC12B24C507003C2171 /* SwiftData */,
-			);
-			path = Todos;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -692,10 +616,13 @@
 			files = (
 				3C896B152B2420A5003C2171 /* crawler_jump.wav in Resources */,
 				3C896B132B2420A5003C2171 /* flyerdie.wav in Resources */,
+				3CDB9EF62E2BF73F00F30185 /* Sendable.md in Resources */,
 				3C896B182B2420A5003C2171 /* button.wav in Resources */,
+				3CDB9EFA2E2BF93300F30185 /* AsyncStream_VS_Combine.md in Resources */,
 				3C896B212B24260F003C2171 /* Screenshot 2023-12-09 at 13.35.21.png in Resources */,
 				3C896B172B2420A5003C2171 /* bounce.wav in Resources */,
 				3CC186AC2B2188B300E6CF74 /* Preview Assets.xcassets in Resources */,
+				3CDB9EF82E2BF83100F30185 /* AsyncStream.md in Resources */,
 				3C896B122B2420A5003C2171 /* flyerattack.wav in Resources */,
 				3C896B192B2420A5003C2171 /* BookTrailer.m4v in Resources */,
 				3C896B162B2420A5003C2171 /* README.markdown in Resources */,
@@ -764,6 +691,7 @@
 				3CC1871D2B220D4E00E6CF74 /* Indicators_ProgressViewStyleView.swift in Sources */,
 				3C896B062B241EED003C2171 /* AudioVideo.swift in Sources */,
 				3C896B1F2B24254A003C2171 /* PlayingAudioVideoInTheBackground.swift in Sources */,
+				3CDB9EF42E2BE70900F30185 /* ConcurrencySimple.swift in Sources */,
 				3CC186F62B21C37300E6CF74 /* ObservableObject_ObservedObject.swift in Sources */,
 				3CC187132B21FDCB00E6CF74 /* Tab.swift in Sources */,
 				3CC1872B2B235BB100E6CF74 /* MasteringSafeAreas.swift in Sources */,

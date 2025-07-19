@@ -101,7 +101,7 @@ struct PresentModalViewFromTabView: View {
         }
         .tag(2)
     }
-    .onChange(of: selectedTab) { _ in
+    .onChange(of: selectedTab) { newValue in
       isPresented = true
     }
     .sheet(isPresented: $isPresented) {
