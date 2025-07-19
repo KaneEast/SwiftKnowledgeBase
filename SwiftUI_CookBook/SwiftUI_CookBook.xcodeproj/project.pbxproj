@@ -84,10 +84,13 @@
 		3CC187262B2355EA00E6CF74 /* Padding_Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC187252B2355E900E6CF74 /* Padding_Spacing.swift */; };
 		3CC187282B23569100E6CF74 /* AlignmentGuides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC187272B23569100E6CF74 /* AlignmentGuides.swift */; };
 		3CC1872B2B235BB100E6CF74 /* MasteringSafeAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC1872A2B235BB100E6CF74 /* MasteringSafeAreas.swift */; };
-		3CDB9EF42E2BE70900F30185 /* ConcurrencySimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF32E2BE70900F30185 /* ConcurrencySimple.swift */; };
+		3CDB9EF42E2BE70900F30185 /* ConcurrencyCheetSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF32E2BE70900F30185 /* ConcurrencyCheetSheet.swift */; };
 		3CDB9EF62E2BF73F00F30185 /* Sendable.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF52E2BF73F00F30185 /* Sendable.md */; };
 		3CDB9EF82E2BF83100F30185 /* AsyncStream.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF72E2BF83100F30185 /* AsyncStream.md */; };
 		3CDB9EFA2E2BF93300F30185 /* AsyncStream_VS_Combine.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EF92E2BF93300F30185 /* AsyncStream_VS_Combine.md */; };
+		3CDB9EFC2E2BFAE400F30185 /* Combine.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EFB2E2BFAE400F30185 /* Combine.md */; };
+		3CDB9EFE2E2BFB2B00F30185 /* Swift.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EFD2E2BFB2B00F30185 /* Swift.md */; };
+		3CDB9F002E2BFB5400F30185 /* SwiftUI.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CDB9EFF2E2BFB5400F30185 /* SwiftUI.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,10 +200,13 @@
 		3CC187252B2355E900E6CF74 /* Padding_Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding_Spacing.swift; sourceTree = "<group>"; };
 		3CC187272B23569100E6CF74 /* AlignmentGuides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentGuides.swift; sourceTree = "<group>"; };
 		3CC1872A2B235BB100E6CF74 /* MasteringSafeAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasteringSafeAreas.swift; sourceTree = "<group>"; };
-		3CDB9EF32E2BE70900F30185 /* ConcurrencySimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencySimple.swift; sourceTree = "<group>"; };
+		3CDB9EF32E2BE70900F30185 /* ConcurrencyCheetSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyCheetSheet.swift; sourceTree = "<group>"; };
 		3CDB9EF52E2BF73F00F30185 /* Sendable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sendable.md; sourceTree = "<group>"; };
 		3CDB9EF72E2BF83100F30185 /* AsyncStream.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AsyncStream.md; sourceTree = "<group>"; };
 		3CDB9EF92E2BF93300F30185 /* AsyncStream_VS_Combine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AsyncStream_VS_Combine.md; sourceTree = "<group>"; };
+		3CDB9EFB2E2BFAE400F30185 /* Combine.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Combine.md; sourceTree = "<group>"; };
+		3CDB9EFD2E2BFB2B00F30185 /* Swift.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift.md; sourceTree = "<group>"; };
+		3CDB9EFF2E2BFB5400F30185 /* SwiftUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftUI.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,7 +333,7 @@
 				3CC186D82B21AB8D00E6CF74 /* SwiftUICheetSheet */,
 				3CC186B92B218DF100E6CF74 /* Architectures */,
 				3CC186B82B218DB600E6CF74 /* iOSFeatures */,
-				3CC186B52B218C9B00E6CF74 /* Snippets */,
+				3CC186B52B218C9B00E6CF74 /* Notes */,
 				3CC186B22B2188C500E6CF74 /* Extensions */,
 				3CC186AA2B2188B300E6CF74 /* Preview Content */,
 				3C896B072B242090003C2171 /* BundleResource */,
@@ -351,7 +357,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3CC186B52B218C9B00E6CF74 /* Snippets */ = {
+		3CC186B52B218C9B00E6CF74 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
 				3C352D9E2B2F001000B4C976 /* DependencyManagers.md */,
@@ -367,7 +373,7 @@
 				3C352DA72B2F050B00B4C976 /* CertificateManagementNote.md */,
 				3C352DA02B2F003200B4C976 /* DesignNote.md */,
 			);
-			path = Snippets;
+			path = Notes;
 			sourceTree = "<group>";
 		};
 		3CC186B82B218DB600E6CF74 /* iOSFeatures */ = {
@@ -400,9 +406,11 @@
 				3CC186C12B219B9100E6CF74 /* Generics.swift */,
 				3CC186C32B219C5200E6CF74 /* Advanced-Generics.swift */,
 				3CC186C52B219EEA00E6CF74 /* Concurrency.swift */,
-				3CDB9EF32E2BE70900F30185 /* ConcurrencySimple.swift */,
+				3CDB9EF32E2BE70900F30185 /* ConcurrencyCheetSheet.swift */,
 				3CDB9EF52E2BF73F00F30185 /* Sendable.md */,
 				3CDB9EF72E2BF83100F30185 /* AsyncStream.md */,
+				3CDB9EFB2E2BFAE400F30185 /* Combine.md */,
+				3CDB9EFD2E2BFB2B00F30185 /* Swift.md */,
 				3CDB9EF92E2BF93300F30185 /* AsyncStream_VS_Combine.md */,
 				3CC186C72B21A05800E6CF74 /* Macros.swift */,
 				3CC186C92B21A09200E6CF74 /* Access-control-code-organization.swift */,
@@ -426,6 +434,7 @@
 				3CC186EC2B21C0DF00E6CF74 /* CustomViewModifiers-CustomViews-Shapes */,
 				3CC186E12B21BACF00E6CF74 /* Listing */,
 				3CC186DE2B21BA8D00E6CF74 /* Navigation */,
+				3CDB9EFF2E2BFB5400F30185 /* SwiftUI.md */,
 			);
 			path = SwiftUICheetSheet;
 			sourceTree = "<group>";
@@ -616,12 +625,15 @@
 			files = (
 				3C896B152B2420A5003C2171 /* crawler_jump.wav in Resources */,
 				3C896B132B2420A5003C2171 /* flyerdie.wav in Resources */,
+				3CDB9EFE2E2BFB2B00F30185 /* Swift.md in Resources */,
 				3CDB9EF62E2BF73F00F30185 /* Sendable.md in Resources */,
 				3C896B182B2420A5003C2171 /* button.wav in Resources */,
 				3CDB9EFA2E2BF93300F30185 /* AsyncStream_VS_Combine.md in Resources */,
 				3C896B212B24260F003C2171 /* Screenshot 2023-12-09 at 13.35.21.png in Resources */,
 				3C896B172B2420A5003C2171 /* bounce.wav in Resources */,
+				3CDB9F002E2BFB5400F30185 /* SwiftUI.md in Resources */,
 				3CC186AC2B2188B300E6CF74 /* Preview Assets.xcassets in Resources */,
+				3CDB9EFC2E2BFAE400F30185 /* Combine.md in Resources */,
 				3CDB9EF82E2BF83100F30185 /* AsyncStream.md in Resources */,
 				3C896B122B2420A5003C2171 /* flyerattack.wav in Resources */,
 				3C896B192B2420A5003C2171 /* BookTrailer.m4v in Resources */,
@@ -691,7 +703,7 @@
 				3CC1871D2B220D4E00E6CF74 /* Indicators_ProgressViewStyleView.swift in Sources */,
 				3C896B062B241EED003C2171 /* AudioVideo.swift in Sources */,
 				3C896B1F2B24254A003C2171 /* PlayingAudioVideoInTheBackground.swift in Sources */,
-				3CDB9EF42E2BE70900F30185 /* ConcurrencySimple.swift in Sources */,
+				3CDB9EF42E2BE70900F30185 /* ConcurrencyCheetSheet.swift in Sources */,
 				3CC186F62B21C37300E6CF74 /* ObservableObject_ObservedObject.swift in Sources */,
 				3CC187132B21FDCB00E6CF74 /* Tab.swift in Sources */,
 				3CC1872B2B235BB100E6CF74 /* MasteringSafeAreas.swift in Sources */,

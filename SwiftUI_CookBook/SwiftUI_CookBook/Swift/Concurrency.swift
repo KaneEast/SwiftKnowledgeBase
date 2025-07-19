@@ -3,43 +3,6 @@
 // Sequence https://developer.apple.com/documentation/swift/sequence
 // AsyncSequence https://developer.apple.com/documentation/swift/asyncsequence
 // https://www.avanderlee.com/swift/async-await/
-/*
- Calling Asynchronous Functions in Parallel
- ```
- let firstPhoto = await downloadPhoto(named: photoNames[0])
- let secondPhoto = await downloadPhoto(named: photoNames[1])
- let thirdPhoto = await downloadPhoto(named: photoNames[2])
- 
- 
- let photos = [firstPhoto, secondPhoto, thirdPhoto]
- show(photos)
- ```
- 
- ```
- async let firstPhoto = downloadPhoto(named: photoNames[0])
- async let secondPhoto = downloadPhoto(named: photoNames[1])
- async let thirdPhoto = downloadPhoto(named: photoNames[2])
- 
- 
- let photos = await [firstPhoto, secondPhoto, thirdPhoto]
- show(photos)
- ```
- 
- Tasks and Task Groups
- ```
- await withTaskGroup(of: Data.self) { taskGroup in
- let photoNames = await listPhotos(inGallery: "Summer Vacation")
- for name in photoNames {
- taskGroup.addTask { await downloadPhoto(named: name) }
- }
- }
- ```
- Unstructured Concurrency
- Task Cancellation
- 
- Actors
- Sendable Types
- */
 
 import Foundation
 import SwiftUI
