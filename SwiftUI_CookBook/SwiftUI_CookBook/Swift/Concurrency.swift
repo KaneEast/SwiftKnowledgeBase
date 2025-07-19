@@ -16,38 +16,38 @@
 /**
  Defining and Calling Asynchronous Functions
  Asynchronous Sequences
-    Sequence https://developer.apple.com/documentation/swift/sequence
-    AsyncSequence https://developer.apple.com/documentation/swift/asyncsequence
+ Sequence https://developer.apple.com/documentation/swift/sequence
+ AsyncSequence https://developer.apple.com/documentation/swift/asyncsequence
  
  Calling Asynchronous Functions in Parallel
  ```
-   let firstPhoto = await downloadPhoto(named: photoNames[0])
-   let secondPhoto = await downloadPhoto(named: photoNames[1])
-   let thirdPhoto = await downloadPhoto(named: photoNames[2])
-
-
-   let photos = [firstPhoto, secondPhoto, thirdPhoto]
-   show(photos)
+ let firstPhoto = await downloadPhoto(named: photoNames[0])
+ let secondPhoto = await downloadPhoto(named: photoNames[1])
+ let thirdPhoto = await downloadPhoto(named: photoNames[2])
+ 
+ 
+ let photos = [firstPhoto, secondPhoto, thirdPhoto]
+ show(photos)
  ```
  
  ```
-   async let firstPhoto = downloadPhoto(named: photoNames[0])
-   async let secondPhoto = downloadPhoto(named: photoNames[1])
-   async let thirdPhoto = downloadPhoto(named: photoNames[2])
-
-
-   let photos = await [firstPhoto, secondPhoto, thirdPhoto]
-   show(photos)
+ async let firstPhoto = downloadPhoto(named: photoNames[0])
+ async let secondPhoto = downloadPhoto(named: photoNames[1])
+ async let thirdPhoto = downloadPhoto(named: photoNames[2])
+ 
+ 
+ let photos = await [firstPhoto, secondPhoto, thirdPhoto]
+ show(photos)
  ```
  
  Tasks and Task Groups
  ```
-   await withTaskGroup(of: Data.self) { taskGroup in
-       let photoNames = await listPhotos(inGallery: "Summer Vacation")
-       for name in photoNames {
-           taskGroup.addTask { await downloadPhoto(named: name) }
-       }
-   }
+ await withTaskGroup(of: Data.self) { taskGroup in
+ let photoNames = await listPhotos(inGallery: "Summer Vacation")
+ for name in photoNames {
+ taskGroup.addTask { await downloadPhoto(named: name) }
+ }
+ }
  ```
  Unstructured Concurrency
  Task Cancellation
@@ -55,7 +55,7 @@
  Actors
  Sendable Types
  
-    
+ 
  */
 
 // Additional Resources
@@ -85,266 +85,266 @@ import Foundation
 import SwiftUI
 
 struct Domains: Decodable {
-  let data: [Domain]
+    let data: [Domain]
 }
 
 struct Domain: Decodable {
-  let attributes: Attributes
+    let attributes: Attributes
 }
 
 struct Attributes: Decodable {
-  let name: String
-  let description: String
-  let level: String
+    let name: String
+    let description: String
+    let level: String
 }
 
 @Sendable func fetchDomains() async throws -> [Domain] {
-  let url = URL(string: "https://api.raywenderlich.com/api/domains")!
-  let (data, _) = try await URLSession.shared.data(from: url)
-  return try JSONDecoder().decode(Domains.self, from: data).data
+    let url = URL(string: "https://api.raywenderlich.com/api/domains")!
+    let (data, _) = try await URLSession.shared.data(from: url)
+    return try JSONDecoder().decode(Domains.self, from: data).data
 }
 
 //: 异步属性和下标
 extension Domains {
-  static var domains: [Domain] {
-    get async throws {
-      try await fetchDomains()
+    static var domains: [Domain] {
+        get async throws {
+            try await fetchDomains()
+        }
     }
-  }
 }
 
 extension Domains {
-  enum Error: Swift.Error {case outOfRange}
-  
-  static subscript(_ index: Int) -> String {
-    get async throws {
-      let domains = try await Self.domains
-      guard domains.indices.contains(index) else {throw Error.outOfRange}
-      return domains[index].attributes.name
+    enum Error: Swift.Error {case outOfRange}
+    
+    static subscript(_ index: Int) -> String {
+        get async throws {
+            let domains = try await Self.domains
+            guard domains.indices.contains(index) else {throw Error.outOfRange}
+            return domains[index].attributes.name
+        }
     }
-  }
 }
 
 extension Playlist: CustomStringConvertible {
-  nonisolated var description: String {
-    "\(title) by \(author)."
-  }
+    nonisolated var description: String {
+        "\(title) by \(author)."
+    }
 }
 
 actor Playlist {
-  let title: String
-  let author: String
-  private(set) var songs: [String]
-  
-  init(title: String, author: String, songs: [String]) {
-    self.title = title
-    self.author = author
-    self.songs = songs
-  }
-  
-  func add(song: String) {
-    songs.append(song)
-  }
-  
-  func remove(song: String) {
-    guard !songs.isEmpty, let index = songs.firstIndex(of: song) else {return}
-    songs.remove(at: index)
-  }
-  
-  func move(song: String, from playlist: Playlist) async {
-    await playlist.remove(song: song)
-    add(song: song)
-  }
-  
-  func move(song: String, to playlist: Playlist) async {
-    await playlist.add(song: song)
-    remove(song: song)
-  }
+    let title: String
+    let author: String
+    private(set) var songs: [String]
+    
+    init(title: String, author: String, songs: [String]) {
+        self.title = title
+        self.author = author
+        self.songs = songs
+    }
+    
+    func add(song: String) {
+        songs.append(song)
+    }
+    
+    func remove(song: String) {
+        guard !songs.isEmpty, let index = songs.firstIndex(of: song) else {return}
+        songs.remove(at: index)
+    }
+    
+    func move(song: String, from playlist: Playlist) async {
+        await playlist.remove(song: song)
+        add(song: song)
+    }
+    
+    func move(song: String, to playlist: Playlist) async {
+        await playlist.add(song: song)
+        remove(song: song)
+    }
 }
 
 final class BasicPlaylist {
-  let title: String
-  let author: String
-  
-  init(title: String, author: String) {
-    self.title = title
-    self.author = author
-  }
+    let title: String
+    let author: String
+    
+    init(title: String, author: String) {
+        self.title = title
+        self.author = author
+    }
 }
 
 extension BasicPlaylist: Sendable {}
 
 func ConcurrencyNameSpace() {
-  //: ## 基本任务
-  Task {
-    print("Doing some work on a task")
-  }
-  print("Doing some work on the main actor")
-
-  Task {
-    print("Doing some work on a task")
-    let sum = (1...100).reduce(0, +)
-    print("1 + 2 + 3 ... 100 = \(sum)")
-  }
-
-  print("Doing some work on the main actor")
-
-  //: ## 取消任务
-  let task = Task {
-    print("Doing some work on a task")
-    let sum = (1...100).reduce(0, +)
-    try Task.checkCancellation()
-    print("1 + 2 + 3 ... 100 = \(sum)")
-  }
-
-  print("Doing some work on the main actor")
-  task.cancel()
-
-
-  //: ## 异步等待
-  Task {
-    print("Hello")
-    try await Task.sleep(nanoseconds: 1_000_000_000)
-    print("Goodbye")
-  }
-
-  // Warning: Concurrently-executed local function 'helloPauseGoodbye()' must be marked as '@Sendable'; this is an error in Swift 6
-  @Sendable func helloPauseGoodbye() async throws {
-    print("Hello")
-    // 暂停任务
-    try await Task.sleep(nanoseconds: 1_000_000_000)
-    print("Goodbye")
-  }
-
-  Task {
-    try await helloPauseGoodbye()
-  }
-
-  
-
-  
-
-  Task {
-    do {
-      let domains = try await fetchDomains()
-      for domain in domains {
-        let attr = domain.attributes
-        print("\(attr.name): \(attr.description) - \(attr.level)")
-      }
-    } catch {
-      print(error)
+    //: ## 基本任务
+    Task {
+        print("Doing some work on a task")
     }
-  }
-
-  /*:
-   ## 异步序列
-   Swift 并发为您提供的另一个强大的抽象是异步序列。获取每个元素可能会导致任务挂起：
-   */
-  @Sendable func findTitle(url: URL) async throws -> String? {
-    for try await line in url.lines {
-      if line.contains("<title>") {
-        return line.trimmingCharacters(in: .whitespaces)
-      }
+    print("Doing some work on the main actor")
+    
+    Task {
+        print("Doing some work on a task")
+        let sum = (1...100).reduce(0, +)
+        print("1 + 2 + 3 ... 100 = \(sum)")
     }
-    return nil
-  }
-
-  Task {
-    if let title = try await findTitle(url: URL(string: "https://www.raywenderlich.com")!) {
-      print(title)
+    
+    print("Doing some work on the main actor")
+    
+    //: ## 取消任务
+    let task = Task {
+        print("Doing some work on a task")
+        let sum = (1...100).reduce(0, +)
+        try Task.checkCancellation()
+        print("1 + 2 + 3 ... 100 = \(sum)")
     }
-  }
-
-  /*:
-   尝试找到第一个标题，然后暂停。
-   尝试找到第二个标题，然后暂停。
-   以元组形式串行返回结果。
-   */
-  func findTitlesSerial(first: URL, second: URL) async throws -> (String?, String?) {
-    let title1 = try await findTitle(url: first)
-    let title2 = try await findTitle(url: second)
-    return (title1, title2)
-  }
-
-
-  /*:
-   ## 异步绑定
-   该声明async let启动一个新的子任务来查找第一个标题。
-   该声明async let同时启动另一个子任务来查找第二个标题。
-   try await接受一系列异步任务并等待所有任务完成。
-   结果以元组形式返回。
-   
-   以这种方式创建结构化任务的好处是可以更轻松地推断任务的生命周期和取消。例如，如果findTitlesParallel(first:second:)正在运行的父任务被标记为已取消，则子任务将自动标记为已取消。
-   */
-  func findTitlesParallel(first: URL, second: URL) async throws -> (String?, String?) {
-    async let title1 = findTitle(url: first)
-    async let title2 = findTitle(url: second)
-    let titles = try await [title1, title2]
-    return (titles[0], titles[1])
-  }
-
-
-  //Warning: The commented asynchronous code only works in projects.
-
-  
-
-  Task {
-    /**
-     Note: You may be unfamiliar with the dump keyword. It behaves like print by sending data to the standard output. However, dump is optimized to show structures and objects and uses mirroring to display data. dump even has some optional parameters to help keep large, complex objects from polluting your console output. print is optimized for String types and uses an object’s .description property through string interpolation.
+    
+    print("Doing some work on the main actor")
+    task.cancel()
+    
+    
+    //: ## 异步等待
+    Task {
+        print("Hello")
+        try await Task.sleep(nanoseconds: 1_000_000_000)
+        print("Goodbye")
+    }
+    
+    // Warning: Concurrently-executed local function 'helloPauseGoodbye()' must be marked as '@Sendable'; this is an error in Swift 6
+    @Sendable func helloPauseGoodbye() async throws {
+        print("Hello")
+        // 暂停任务
+        try await Task.sleep(nanoseconds: 1_000_000_000)
+        print("Goodbye")
+    }
+    
+    Task {
+        try await helloPauseGoodbye()
+    }
+    
+    
+    
+    
+    
+    Task {
+        do {
+            let domains = try await fetchDomains()
+            for domain in domains {
+                let attr = domain.attributes
+                print("\(attr.name): \(attr.description) - \(attr.level)")
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
+    /*:
+     ## 异步序列
+     Swift 并发为您提供的另一个强大的抽象是异步序列。获取每个元素可能会导致任务挂起：
      */
-    dump(try await Domains.domains)
-  }
-
-  
-
-  Task {
-    dump(try await Domains[4])
-  }
-
-  /*:
-   The keyword actor replaces the keyword class.
-   Both move(song:from:) and move(song:to:) have an additional Playlist as a parameter. This parameter means that they operate on two actors: self and playlist. You must use await to access the other playlist because the methods may have to wait their turn to get synchronized access to the playlist actor.
-   Because move(song:from:) and move(song:to:) use await in their implementation, you must now mark them as async. All actor methods are implicitly asynchronous, but the implementation forces you to be explicit here.
-   */
-  
-
-  let favorites = Playlist(title: "Favorite songs", author: "Cosmin", songs: ["Nothing else matters"])
-  let partyPlaylist = Playlist(title: "Party songs", author: "Ray", songs: ["Stairway to heaven"])
-
-  Task {
-    await favorites.move(song: "Stairway to heaven", from: partyPlaylist)
-    await favorites.move(song: "Nothing else matters", to: partyPlaylist)
-    await print(favorites.songs)
-  }
-
-  /*:
-   Notice the nonisolated keyword. What’s that doing here?
-   The CustomStringConvertible protocol requires a synchronous description property. However, like actor methods, actor properties are also implicitly asynchronous so they can suspend and wait for other tasks accessing the property to finish. This protection is called actor isolation. Unfortunately, it does not match the protocol definition, which assumes no contention. The nonisolated keyword makes this property synchronous by disabling the actor’s synchronization features.
-   It’s safe to do that in this case because both title and author are constants. Therefore, the computed property only accesses immutable states.
-   */
-  
-
-  print(favorites)
-
-  
-
-  /*:
-   符合Sendable协议的类型与共享突变隔离，因此它们可以安全地并发或跨线程使用。这些类型具有值语义，
-   Here, BasicPlaylist is Sendable because it’s final, so it doesn’t support inheritance, and all of its stored properties are immutable and Sendable.
-
-   */
-  
-
-  func execute(task: @escaping @Sendable () -> Void, with priority: TaskPriority? = nil) {
-    Task(priority: priority, operation: task)
-  }
-
-  @Sendable func showRandomNumber() {
-    let number = Int.random(in: 1...10)
-    print(number)
-  }
-
-  execute(task: showRandomNumber)
+    @Sendable func findTitle(url: URL) async throws -> String? {
+        for try await line in url.lines {
+            if line.contains("<title>") {
+                return line.trimmingCharacters(in: .whitespaces)
+            }
+        }
+        return nil
+    }
+    
+    Task {
+        if let title = try await findTitle(url: URL(string: "https://www.raywenderlich.com")!) {
+            print(title)
+        }
+    }
+    
+    /*:
+     尝试找到第一个标题，然后暂停。
+     尝试找到第二个标题，然后暂停。
+     以元组形式串行返回结果。
+     */
+    func findTitlesSerial(first: URL, second: URL) async throws -> (String?, String?) {
+        let title1 = try await findTitle(url: first)
+        let title2 = try await findTitle(url: second)
+        return (title1, title2)
+    }
+    
+    
+    /*:
+     ## 异步绑定
+     该声明async let启动一个新的子任务来查找第一个标题。
+     该声明async let同时启动另一个子任务来查找第二个标题。
+     try await接受一系列异步任务并等待所有任务完成。
+     结果以元组形式返回。
+     
+     以这种方式创建结构化任务的好处是可以更轻松地推断任务的生命周期和取消。例如，如果findTitlesParallel(first:second:)正在运行的父任务被标记为已取消，则子任务将自动标记为已取消。
+     */
+    func findTitlesParallel(first: URL, second: URL) async throws -> (String?, String?) {
+        async let title1 = findTitle(url: first)
+        async let title2 = findTitle(url: second)
+        let titles = try await [title1, title2]
+        return (titles[0], titles[1])
+    }
+    
+    
+    //Warning: The commented asynchronous code only works in projects.
+    
+    
+    
+    Task {
+        /**
+         Note: You may be unfamiliar with the dump keyword. It behaves like print by sending data to the standard output. However, dump is optimized to show structures and objects and uses mirroring to display data. dump even has some optional parameters to help keep large, complex objects from polluting your console output. print is optimized for String types and uses an object’s .description property through string interpolation.
+         */
+        dump(try await Domains.domains)
+    }
+    
+    
+    
+    Task {
+        dump(try await Domains[4])
+    }
+    
+    /*:
+     The keyword actor replaces the keyword class.
+     Both move(song:from:) and move(song:to:) have an additional Playlist as a parameter. This parameter means that they operate on two actors: self and playlist. You must use await to access the other playlist because the methods may have to wait their turn to get synchronized access to the playlist actor.
+     Because move(song:from:) and move(song:to:) use await in their implementation, you must now mark them as async. All actor methods are implicitly asynchronous, but the implementation forces you to be explicit here.
+     */
+    
+    
+    let favorites = Playlist(title: "Favorite songs", author: "Cosmin", songs: ["Nothing else matters"])
+    let partyPlaylist = Playlist(title: "Party songs", author: "Ray", songs: ["Stairway to heaven"])
+    
+    Task {
+        await favorites.move(song: "Stairway to heaven", from: partyPlaylist)
+        await favorites.move(song: "Nothing else matters", to: partyPlaylist)
+        await print(favorites.songs)
+    }
+    
+    /*:
+     Notice the nonisolated keyword. What’s that doing here?
+     The CustomStringConvertible protocol requires a synchronous description property. However, like actor methods, actor properties are also implicitly asynchronous so they can suspend and wait for other tasks accessing the property to finish. This protection is called actor isolation. Unfortunately, it does not match the protocol definition, which assumes no contention. The nonisolated keyword makes this property synchronous by disabling the actor’s synchronization features.
+     It’s safe to do that in this case because both title and author are constants. Therefore, the computed property only accesses immutable states.
+     */
+    
+    
+    print(favorites)
+    
+    
+    
+    /*:
+     符合Sendable协议的类型与共享突变隔离，因此它们可以安全地并发或跨线程使用。这些类型具有值语义，
+     Here, BasicPlaylist is Sendable because it’s final, so it doesn’t support inheritance, and all of its stored properties are immutable and Sendable.
+     
+     */
+    
+    
+    func execute(task: @escaping @Sendable () -> Void, with priority: TaskPriority? = nil) {
+        Task(priority: priority, operation: task)
+    }
+    
+    @Sendable func showRandomNumber() {
+        let number = Int.random(in: 1...10)
+        print(number)
+    }
+    
+    execute(task: showRandomNumber)
 }
 
 
