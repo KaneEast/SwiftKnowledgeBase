@@ -1,5 +1,5 @@
 import SwiftUI
-class TaskManager: ObservableObject {
+private class TaskManager: ObservableObject {
   @Published var tasks = [String]()
 
   func addTask(_ task: String) {
@@ -7,7 +7,7 @@ class TaskManager: ObservableObject {
   }
 }
 
-struct TaskListView: View {
+private struct TaskListView: View {
   @EnvironmentObject var taskManager: TaskManager
   @State private var newTask = ""
 
@@ -31,7 +31,7 @@ struct TaskListView: View {
   }
 }
 
-struct BestPractiesForStateManagementView: View {
+private struct BestPractiesForStateManagementView: View {
   @StateObject var taskManager = TaskManager()
   
   var body: some View {

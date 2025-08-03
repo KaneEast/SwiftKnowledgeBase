@@ -1,6 +1,6 @@
 import SwiftUI
 import Combine
-struct ProgressBar: View {
+private struct ProgressBar: View {
   @State private var progress: CGFloat = 0.0
 
   let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()

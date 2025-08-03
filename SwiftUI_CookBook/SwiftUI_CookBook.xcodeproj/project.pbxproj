@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -211,6 +211,10 @@
 		3CDB9EFF2E2BFB5400F30185 /* SwiftUI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SwiftUI.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3C5827F12E3F01FB00896FDB /* DesignPatterns */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = DesignPatterns; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		3C896B922B247817003C2171 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -334,6 +338,7 @@
 		3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				3C5827F12E3F01FB00896FDB /* DesignPatterns */,
 				3C5827922E3DBEC300896FDB /* SwiftPackageManager */,
 				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
 				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
@@ -575,6 +580,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3C5827F12E3F01FB00896FDB /* DesignPatterns */,
 			);
 			name = SwiftUI_CookBook;
 			productName = SwiftUI_CookBook;
