@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C5827942E3DBED800896FDB /* SPM.md in Resources */ = {isa = PBXBuildFile; fileRef = 3C5827932E3DBED800896FDB /* SPM.md */; };
 		3C896AFE2B235DB2003C2171 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896AFD2B235DB2003C2171 /* BasicAnimation.swift */; };
 		3C896B012B237427003C2171 /* Gestures_Interactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896B002B237427003C2171 /* Gestures_Interactions.swift */; };
 		3C896B042B23934D003C2171 /* ModalViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C896B032B23934D003C2171 /* ModalViews.swift */; };
@@ -111,6 +112,7 @@
 		3C352DA52B2F04BA00B4C976 /* AppServicesNote.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AppServicesNote.md; sourceTree = "<group>"; };
 		3C352DA72B2F050B00B4C976 /* CertificateManagementNote.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CertificateManagementNote.md; sourceTree = "<group>"; };
 		3C352DAB2B5BAFF000B4C976 /* ManagingXcodeSpace.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ManagingXcodeSpace.md; sourceTree = "<group>"; };
+		3C5827932E3DBED800896FDB /* SPM.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SPM.md; sourceTree = "<group>"; };
 		3C896AFD2B235DB2003C2171 /* BasicAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
 		3C896B002B237427003C2171 /* Gestures_Interactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gestures_Interactions.swift; sourceTree = "<group>"; };
 		3C896B032B23934D003C2171 /* ModalViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViews.swift; sourceTree = "<group>"; };
@@ -228,6 +230,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C5827922E3DBEC300896FDB /* SwiftPackageManager */ = {
+			isa = PBXGroup;
+			children = (
+				3C5827932E3DBED800896FDB /* SPM.md */,
+			);
+			path = SwiftPackageManager;
+			sourceTree = "<group>";
+		};
 		3C896AFF2B2373F6003C2171 /* Gestures_Interactions */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +334,7 @@
 		3CC186A32B2188B000E6CF74 /* SwiftUI_CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				3C5827922E3DBEC300896FDB /* SwiftPackageManager */,
 				3CC186A42B2188B000E6CF74 /* SwiftUI_CookBookApp.swift */,
 				3CC186A62B2188B000E6CF74 /* ContentView.swift */,
 				3CC187082B21CE5F00E6CF74 /* SwiftUI-CookBook-Info.plist */,
@@ -630,6 +641,7 @@
 				3C896B182B2420A5003C2171 /* button.wav in Resources */,
 				3CDB9EFA2E2BF93300F30185 /* AsyncStream_VS_Combine.md in Resources */,
 				3C896B212B24260F003C2171 /* Screenshot 2023-12-09 at 13.35.21.png in Resources */,
+				3C5827942E3DBED800896FDB /* SPM.md in Resources */,
 				3C896B172B2420A5003C2171 /* bounce.wav in Resources */,
 				3CDB9F002E2BFB5400F30185 /* SwiftUI.md in Resources */,
 				3CC186AC2B2188B300E6CF74 /* Preview Assets.xcassets in Resources */,
